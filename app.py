@@ -100,14 +100,16 @@ writing_task = Task(
             - Follows proper markdown formatting, using H1 for the title and H3 for the sub-sections
         """
     ),
-    agent=content_writer
+    agent=content_writer,
+    
 )
 
 # Create the Crew
 crew = Crew(
     agents=[senior_research_analyst, content_writer],
     tasks=[research_task, writing_task],
-    verbose=True
+    verbose=True,
+    
 )
 
 # Run the Crew with the topic as input
